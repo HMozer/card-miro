@@ -1,0 +1,110 @@
+.deck-cartas
+{
+    border-right: 1px solid black;
+    height: 100%;
+    padding-right: 0;
+} 
+
+.carta
+{
+    width: 40%;
+    background-color: #b4b4b4;
+    transition: width 0.5s;
+    padding-bottom: 0.3em;
+
+    cursor: pointer;
+}
+
+.div-carta-nome
+{
+    padding-top: 0.4em;
+}
+
+.carta-selecionada
+{
+    width: 100% !important;
+    background-color: #ffd781;
+    transition: width 0.5s;
+}
+
+.tabuleiro-divisoria
+{
+    margin-top: 25%;
+}
+
+.carta-modelo
+{
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 600px;
+
+    padding: 10px 20px 0px 20px;
+
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+54,d80000+60,ffffff+67&0.9+1,0.45+50,0+89 */
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+40,ffffff+45,d80000+50,ffffff+55,000000+60,000000+100&0.9+1,0.45+50,1+100 */
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+71,ffffff+80,d80000+86,ffffff+91,000000+95,000000+100&0.9+71,0.45+86,1+100 */
+    background: -moz-linear-gradient(-45deg,  rgba(0,0,0,0.9) 71%, rgba(255,255,255,0.63) 80%, rgba(216,0,0,0.45) 86%, rgba(255,255,255,0.65) 91%, rgba(0,0,0,0.81) 95%, rgba(0,0,0,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg,  rgba(0,0,0,0.9) 71%,rgba(255,255,255,0.63) 80%,rgba(216,0,0,0.45) 86%,rgba(255,255,255,0.65) 91%,rgba(0,0,0,0.81) 95%,rgba(0,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg,  rgba(0,0,0,0.9) 71%,rgba(255,255,255,0.63) 80%,rgba(216,0,0,0.45) 86%,rgba(255,255,255,0.65) 91%,rgba(0,0,0,0.81) 95%,rgba(0,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6000000', endColorstr='#000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.carta-modelo .carta-nome
+{
+    border-bottom: 1px #fff solid;
+}
+
+.div-carta-imagem .carta-imagem
+{
+    width: 100%;
+    height: 25%;
+    max-height: 250px;
+    object-fit: cover;
+}
+
+.separador-imagem-atributo
+{
+    border-top: 1px #fff solid;
+    margin-top: 0.7rem;
+    margin-bottom: 0;
+}
+
+.div-carta-atributo
+{
+    padding-top: 20px;
+}
+
+.div-carta-atributo ul li
+{
+    padding: 10px 0 10px 30px;
+    margin-bottom: 10px;
+
+    background-color: rgba(90, 90, 90, 0.404) ;
+    border: 1px solid black;
+    border-radius: 5px;
+
+    color: #FFF;
+}
+
+.div-carta-atributo ul li:hover
+{
+    background-color: #ffcb59;
+    color: #000;
+    cursor: pointer !important;
+}
+
+.div-carta-atributo-selecionado
+{
+    background-color: #ffcb59 !important;
+    color: #000 !important;
+}
+
+.conteudo-carta-selecionada
+{
+    cursor: pointer;
+}
+
+.texto-pontuacao
+{
+    font-weight: bold;
+}

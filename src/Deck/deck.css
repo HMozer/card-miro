@@ -1,0 +1,69 @@
+.deck
+{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.deck-carta
+{
+    cursor: pointer;
+    border-radius: 5px;
+    color: rgb(173, 172, 172);
+    height: 200px;
+
+    margin-right: 2px;
+
+    flex: 0 0 12% !important;
+    
+    background: -moz-linear-gradient(-45deg,  rgba(0,0,0,0.9) 71%, rgba(255,255,255,0.63) 80%, rgba(216,0,0,0.45) 86%, rgba(255,255,255,0.65) 91%, rgba(0,0,0,0.81) 95%, rgba(0,0,0,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg,  rgba(0,0,0,0.9) 71%,rgba(255,255,255,0.63) 80%,rgba(216,0,0,0.45) 86%,rgba(255,255,255,0.65) 91%,rgba(0,0,0,0.81) 95%,rgba(0,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg,  rgba(0,0,0,0.9) 71%,rgba(255,255,255,0.63) 80%,rgba(216,0,0,0.45) 86%,rgba(255,255,255,0.65) 91%,rgba(0,0,0,0.81) 95%,rgba(0,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6000000', endColorstr='#000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    
+    background-color: #000;
+}
+
+.deck-carta:hover
+{
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.747);
+    transition: all .5s;
+    margin-top: -20px;
+    padding-bottom: 20px;
+}
+
+.deck-carta-selecionada
+{
+    background-color: rgb(243, 199, 3);
+}
+
+.deck-carta h4
+{
+    padding-top: 5px;
+    margin-bottom: 0.3rem;
+}
+
+.separador-deck-carta
+{
+    border-top: 1px #fff solid;
+    margin-top: 0.3rem;
+    margin-bottom: 0;
+}
+
+.atributos-resumidos
+{
+    padding-top: 10px;
+    font-size: 16pt;
+}
+
+.atributos-resumidos p
+{
+    margin-bottom: 0.2rem;
+    line-height: 1;
+}
+
+.atributos-resumidos p label
+{
+    margin-right: 5px;
+}
