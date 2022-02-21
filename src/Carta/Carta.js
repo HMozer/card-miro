@@ -1,6 +1,8 @@
 import React from 'react';
 import Atributo from './Atributo';
 
+import imagemPadrao from './img/black_250x250.gif';
+
 class Carta extends React.Component
 {
     existeCartaSelecionada(cartaSelecionada)
@@ -32,6 +34,9 @@ class Carta extends React.Component
     {
         if (this.existeCartaSelecionada(cartaSelecionada))
             return <br />;
+
+        if (cartaSelecionada.imagem === undefined)
+            cartaSelecionada.imagem = imagemPadrao;
 
         return (
             <>
