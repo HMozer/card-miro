@@ -1,7 +1,7 @@
 import React from 'react';
 import Atributo from './Atributo';
 
-import imagemPadrao from './img/black_250x250.gif';
+import imagemPadrao from '../Comum/img/black_250x250.gif';
 
 class Carta extends React.Component
 {
@@ -66,6 +66,13 @@ class Carta extends React.Component
         );
     }
 
+    retornaClasse()
+    {
+        return this.props.listagem === undefined ?
+            "col-5 col-sm-5 col-md-5 col-lg-5 col-xl-5 carta-escolhida"
+            : "col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 carta-escolhida";
+    }
+
     render()
     {
         const cartaSelecionada = this.props.carta;
@@ -76,8 +83,10 @@ class Carta extends React.Component
         const funcaoClick = this.props.onClick;
         const atributos = this.retornaAtributos(cartaSelecionada, atributoSelecionado, funcaoClick);
 
+        const classeCarta = this.retornaClasse();
+
         return (
-            <div className="col-5 col-sm-5 col-md-5 col-lg-5 col-xl-5 carta-escolhida">
+            <div className={classeCarta}>
                 <div className="carta-modelo w-100p">
                     {nome}
                     {imagem}

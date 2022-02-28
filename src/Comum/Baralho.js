@@ -228,8 +228,14 @@ const Baralho = (function()
         return buscaCartas(cartasSelecionadas);
     }
 
+    function retornaCartas()
+    {
+        return [].concat(CARTAS_JOGO);
+    }
+
     return {
         montaBaralho: montaBaralho
+        , retornaCartas: retornaCartas
     };
 })();
 

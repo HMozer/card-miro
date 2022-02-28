@@ -50,7 +50,6 @@ class App extends React.Component
 
     montaBaralhos(porcentagemAcerto = 30)
     {
-        console.log(porcentagemAcerto);
         IA.alteraPorcentagemAcerto(porcentagemAcerto);
         const deckJogador = Baralho.montaBaralho();
         const deckIA = Baralho.montaBaralho();

@@ -12,6 +12,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './basico.css';
 
 import App from './App';
+import Lista from './ListaCartas/Lista';
 import Creditos from './Creditos/Creditos';
 import NaoEncontrado from './Comum/NaoEncontrado';
 
@@ -30,6 +31,9 @@ ReactDOM.render(
                         to="/">Jogar</Link>
                     <Link
                         className="p-2 text-dark"
+                        to="/cartas">Cartas do Jogo</Link>
+                    <Link
+                        className="p-2 text-dark"
                         to="/creditos">Créditos</Link>
                 </nav>
             </div>
@@ -39,6 +43,9 @@ ReactDOM.render(
                     exact
                     path="/"
                     element={<App className="z-1"/>} />
+                <Route
+                    path="/cartas"
+                    element={<Lista />} />
                 <Route
                     path="/creditos"
                     element={<Creditos />} />

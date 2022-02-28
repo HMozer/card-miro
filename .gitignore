@@ -14,8 +14,6 @@
 #images
 *.jpg
 
-/public
-
 # misc
 .DS_Store
 .env.local

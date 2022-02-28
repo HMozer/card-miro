@@ -29,7 +29,6 @@ const IA = (function()
     {
         let posicaoCarta;
         let podeObservar = geraNumeroAleatorio(1, 101) <= PRCNTGM_ACERTO;
-        console.log(podeObservar);
         posicaoCarta = retornaCartaAleatoria(cartas);
         
         if (podeObservar)
