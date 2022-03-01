@@ -1,5 +1,8 @@
 import React from 'react';
 
+import imgDifculdade from './img-tutorial/img-dificuldade.jpg';
+import imgTabuleiro from './img-tutorial/img-tabuleiro.jpg';
+
 import './painel.css';
 
 class Painel extends React.Component
@@ -115,6 +118,56 @@ class Painel extends React.Component
         );
     }
 
+    montaTutorial()
+    {
+        let cor = this.state.corPadrao;
+
+        return (
+            <div className={cor}>
+                <span className="painel-fechar text-dark">&times;</span>
+                <div className="mx-auto div-tutorial">
+                    <h2>Tutorial</h2>
+                    <hr />
+
+                    <ol type="1">
+                        <li>
+                            <p>Primeiro passo é escolher a dificuldade.</p>
+                            <img
+                                src={imgDifculdade}
+                                className="img-tutorial"
+                                alt="Menu de dificuldade" />
+                            <p className="mt-1">
+                                As dificuldades representam a chance que o computador tem de saber a sua carta.
+                                <br /><b>Fácil: 30% de chance</b>
+                                <br /><b>Médio: 40% de chance</b>
+                                <br /><b>Difícil: 50% de chance</b>
+                            </p>
+                        </li>
+                        <li>
+                            <p>Selecionada a dificuldade será apresentada o tabuleiro do jogo.</p>
+                            <img
+                                src={imgTabuleiro}
+                                className="img-tutorial"
+                                alt="Tabuleiro do jogo" />
+                            <p className="mt-2">Segue abaixo a descrição do tabuleiro:</p>
+                            <p className="separa-li-item">
+                                <b>Item 1</b> - Carta selecionada pelo jogador. Ao iniciar a primeira carta do baralho é selecionada.
+                                <br />
+                                <b>Item 2</b> - Carta do computador. Só é selecionada após o jogador escolher o atributo.
+                                <br />
+                                <b>Item 3</b> - Baralho do jogador.
+                                <br />
+                                <b>Item 4</b> - Pontuação do jogador.
+                                <br />
+                                <b>Item 5</b> - Pontuação do computador.
+                            </p>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        );
+    }
+
     montaPainel(tipo)
     {
         let painel = null;
@@ -127,6 +180,9 @@ class Painel extends React.Component
             break;
             case 'VENCEDOR':
                 painel = this.montaMensagemVencedor();
+            break;
+            case 'TUTORIAL':
+                painel = this.montaTutorial();
             break;
             case 'MENU_INICIAL':
                 /* Diferente devido a diferentes porcentagens de acerto */

@@ -11,8 +11,8 @@
 # production
 /build
 
-#images
-*.jpg
+#remove-imagens-cartas
+/src/Comum/img/*.jpg
 
 # misc
 .DS_Store

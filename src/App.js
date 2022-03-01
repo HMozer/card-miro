@@ -39,13 +39,32 @@ class App extends React.Component
 
     componentDidMount()
     {
+        this.apresentaPainelInicial();
+    }
+
+    apresentaPainelInicial()
+    {
+        const apresentaTutorial = localStorage.getItem('jaVisitou');
+        let tipoPainel = 'MENU_INICIAL';
+        let complementoPainel = { funcao: this.montaBaralhos.bind(this) };
+
+        if (apresentaTutorial === null)
+        {
+            tipoPainel = 'TUTORIAL';
+            complementoPainel = { funcao: this.apresentaDificuldade.bind(this) };
+        }
+
         this.setState({
-            tipoPainel: 'MENU_INICIAL'
-            , complementoPainel:
-            {
-                funcao: this.montaBaralhos.bind(this)
-            }
+            tipoPainel: tipoPainel
+            , complementoPainel: complementoPainel  
         });
+    }
+
+    apresentaDificuldade()
+    {
+        console.log('entrei aqui');
+        localStorage.setItem('jaVisitou', true);
+        this.apresentaPainelInicial();
     }
 
     montaBaralhos(porcentagemAcerto = 30)
